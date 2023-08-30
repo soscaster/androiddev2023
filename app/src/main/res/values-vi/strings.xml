@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">USTH Thời Tiết</string>
+    <string name="usth_weather">USTH Thời Tiết</string>
+    <string name="hello_blank_fragment">Xin chào khoảng không trống</string>
+    <string name="hanoi">Hà Nội\nViệt Nam</string>
+    <string name="paris">Pa-ri\nPháp</string>
+    <string name="toulouse">Toulouse\nPháp</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="refreshed">Bạn vừa bấm nút Tải lại!</string>
+    <string name="settings">Cài đặt</string>
+    <string name="pref_open">Đã chạy Hoạt động Preference!</string>
+</resources>

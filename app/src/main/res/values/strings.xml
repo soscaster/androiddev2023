@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">USTH Weather</string>
+    <string name="usth_weather">USTH Weather</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hanoi">Hanoi\nVietnam</string>
+    <string name="paris">Paris\nFrance</string>
+    <string name="toulouse">Toulouse\nFrance</string>
+    <string name="language">Language</string>
+    <string name="vietnamese" translatable="false">Tiếng Việt</string>
+    <string name="english" translatable="false">English</string>
+    <string name="refreshed">You just pressed the Refresh button!</string>
+    <string name="settings">Settings</string>
+    <string name="pref_open">Preference Activity activated!</string>
+</resources>

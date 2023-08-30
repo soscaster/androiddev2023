@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="condition">
+        <item>Mây vài nơi</item>
+        <item>Trời nắng</item>
+        <item>Trời mưa</item>
+        <item>Nhiều mây</item>
+        <item>Gió mạnh</item>
+        <item>Có tuyết</item>
+        <item>Có bão</item>
+    </string-array>
+    <string-array name="days_of_the_week">
+        <item>Thứ 2</item>
+        <item>Thứ 3</item>
+        <item>Thứ 4</item>
+        <item>Thứ 5</item>
+        <item>Thứ 6</item>
+        <item>Thứ 7</item>
+        <item>CN</item>
+    </string-array>
+    <integer-array name="degrees">
+        <item>25</item>
+        <item>28</item>
+        <item>22</item>
+        <item>24</item>
+        <item>23</item>
+        <item>21</item>
+        <item>20</item>
+    </integer-array>
+    <integer-array name="degrees2">
+        <item>3</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>2</item>
+        <item>9</item>
+        <item>4</item>
+    </integer-array>
+    <string name="app_name">USTH Thời Tiết</string>
+    <string name="hanoi">Hà Nội\nViệt Nam</string>
+    <string name="hello_blank_fragment">Xin chào khoảng không trống</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="paris">Pa-ri\nPháp</string>
+    <string name="pref_open">Đã chạy Hoạt động Preference!</string>
+    <string name="refreshed">Bạn vừa bấm nút Tải lại!</string>
+    <string name="settings">Cài đặt</string>
+    <string name="toulouse">Toulouse\nPháp</string>
+    <string name="usth_weather">USTH Thời Tiết</string>
+</resources>

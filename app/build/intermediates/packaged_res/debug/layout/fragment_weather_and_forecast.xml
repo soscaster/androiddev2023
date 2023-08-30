@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".WeatherAndForecastFragment">
+
+    <!-- WeatherFragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_weather"
+        android:name="vn.edu.usth.weather.WeatherFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <!-- ForecastFragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_forecast"
+        android:name="vn.edu.usth.weather.ForecastFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+</FrameLayout>
+</ScrollView>
