@@ -40,12 +40,12 @@
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/snowy.png"
     },
     {
-        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-xhdpi_ic_language.png.flat",
-        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xhdpi/ic_language.png"
-    },
-    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/layout_fragment_weather.xml.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/layout/fragment_weather.xml"
+    },
+    {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-xhdpi_ic_language.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xhdpi/ic_language.png"
     },
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-anydpi_ic_settings.xml.flat",
@@ -196,10 +196,6 @@
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/night_snow.png"
     },
     {
-        "merged": "vn.edu.usth.weather.app-merged_res-28:/drawable-anydpi_ic_settings.xml.flat",
-        "source": "vn.edu.usth.weather.app-main-30:/drawable-anydpi/ic_settings.xml"
-    },
-    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/mipmap-xxxhdpi/ic_launcher.png"
     },
@@ -210,6 +206,10 @@
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/layout_activity_pref.xml.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/layout/activity_pref.xml"
+    },
+    {
+        "merged": "vn.edu.usth.weather.app-merged_res-28:/menu_menu.xml.flat",
+        "source": "vn.edu.usth.weather.app-main-30:/menu/menu.xml"
     },
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable_night_cloudy_moon.png.flat",
