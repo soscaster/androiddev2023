@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="days_of_the_week">
+        <item>Thứ 2</item>
+        <item>Thứ 3</item>
+        <item>Thứ 4</item>
+        <item>Thứ 5</item>
+        <item>Thứ 6</item>
+        <item>Thứ 7</item>
+        <item>CN</item>
+    </string-array>
+    <string-array name="condition">
+        <item>Mây vài nơi</item>
+        <item>Trời nắng</item>
+        <item>Trời mưa</item>
+        <item>Nhiều mây</item>
+        <item>Gió mạnh</item>
+        <item>Có tuyết</item>
+        <item>Có bão</item>
+    </string-array>
+    <integer-array name="degrees">
+        <item>25</item>
+        <item>28</item>
+        <item>22</item>
+        <item>24</item>
+        <item>23</item>
+        <item>21</item>
+        <item>20</item>
+    </integer-array>
+    <integer-array name="degrees2">
+        <item>3</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>2</item>
+        <item>9</item>
+        <item>4</item>
+    </integer-array>
+</resources>

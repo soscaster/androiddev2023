@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="days_of_the_week">
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+        <item>Sun</item>
+    </string-array>
+    <string-array name="condition">
+        <item>Partly cloudy</item>
+        <item>Sunny</item>
+        <item>Rainy</item>
+        <item>Cloudy</item>
+        <item>Windy</item>
+        <item>Snowy</item>
+        <item>Stormy</item>
+    </string-array>
+    <integer-array name="degrees">
+        <item>25</item>
+        <item>28</item>
+        <item>22</item>
+        <item>24</item>
+        <item>23</item>
+        <item>21</item>
+        <item>20</item>
+    </integer-array>
+    <integer-array name="degrees2">
+        <item>3</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>2</item>
+        <item>9</item>
+        <item>4</item>
+    </integer-array>
+</resources>
