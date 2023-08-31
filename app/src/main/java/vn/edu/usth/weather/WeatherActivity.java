@@ -1,6 +1,7 @@
 package vn.edu.usth.weather;
 
 import static android.os.SystemClock.sleep;
+import static com.android.volley.toolbox.Volley.newRequestQueue;
 import static com.google.android.material.internal.ContextUtils.getActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import com.android.volley.*;
+import com.android.volley.toolbox.ImageRequest;
 import com.google.android.material.tabs.TabLayout;
 
 import android.app.Activity;
@@ -245,40 +249,55 @@ public class WeatherActivity extends AppCompatActivity {
 //            t.start();
 //            Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
 
-            AsyncTask<String, Integer, Bitmap> task = new AsyncTask<String, Integer, Bitmap>() {
-                @Override
-                protected Bitmap doInBackground(String... strings) {
-//                    sleep(2000);
-                    // Make a request to server
-                    try {
-                        URL url = new URL("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
-                        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                        connection.setRequestMethod("GET");
-                        connection.setDoInput(true);
-                        connection.connect();
-                        int response = connection.getResponseCode();
-                        Log.i("USTHWeather", "The response is: " + response);
-                        InputStream is = connection.getInputStream();
-                        Bitmap bitmap = BitmapFactory.decodeStream(is);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                ImageView logo = (ImageView) findViewById(R.id.weather_icon);
-                                logo.setImageBitmap(bitmap);
-                            }
-                        });
-                    } catch (Exception e) {
-                        Log.i(TAG, "ERROR: " + e);
-                    }
-                    return null;
-                }
+//            Practical 15 code:
+//            AsyncTask<String, Integer, Bitmap> task = new AsyncTask<String, Integer, Bitmap>() {
+//                @Override
+//                protected Bitmap doInBackground(String... strings) {
+////                    sleep(2000);
+//                    // Make a request to server
+//                    try {
+//                        URL url = new URL("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
+//                        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//                        connection.setRequestMethod("GET");
+//                        connection.setDoInput(true);
+//                        connection.connect();
+//                        int response = connection.getResponseCode();
+//                        Log.i("USTHWeather", "The response is: " + response);
+//                        InputStream is = connection.getInputStream();
+//                        Bitmap bitmap = BitmapFactory.decodeStream(is);
+//                        runOnUiThread(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                ImageView logo = (ImageView) findViewById(R.id.weather_icon);
+//                                logo.setImageBitmap(bitmap);
+//                            }
+//                        });
+//                    } catch (Exception e) {
+//                        Log.i(TAG, "ERROR: " + e);
+//                    }
+//                    return null;
+//                }
+//
+//                @Override
+//                protected void onPostExecute(Bitmap bitmap) {
+//                    Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
+//                }
+//            };
+//            task.execute("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
 
+            // Practical Work 16 code:
+            RequestQueue queue = newRequestQueue(getBaseContext());
+            Response.Listener<Bitmap> listener = new Response.Listener<Bitmap>() {
                 @Override
-                protected void onPostExecute(Bitmap bitmap) {
-                    Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
+                public void onResponse(Bitmap response) {
+                    ImageView iv = (ImageView) findViewById(R.id.weather_icon);
+                    iv.setImageBitmap(response);
                 }
             };
-            task.execute("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
+            ImageRequest imageRequest = new ImageRequest("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png", listener, 0, 0, ImageView.ScaleType.CENTER, Bitmap.Config.ARGB_8888,null);
+            // go!
+            queue.add(imageRequest);
+            Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
         }
         if (id == R.id.settings) {
             Intent intent = new Intent(this, PrefActivity.class);
