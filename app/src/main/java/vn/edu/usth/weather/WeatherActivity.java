@@ -1,5 +1,6 @@
 package vn.edu.usth.weather;
 
+import static android.os.SystemClock.sleep;
 import static com.google.android.material.internal.ContextUtils.getActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +23,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -205,36 +208,50 @@ public class WeatherActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.refresh) {
-            final Handler handler = new Handler(Looper.getMainLooper()) {
+//            Practical Work 13 code:
+//            final Handler handler = new Handler(Looper.getMainLooper()) {
+//                @Override
+//                public void handleMessage(Message msg) {
+//                    // This method is executed in main thread
+//                    String content = msg.getData().getString(SERVER_RESPONSE);
+//                    Toast.makeText(getBaseContext(), content, Toast.LENGTH_LONG).show();
+//                }
+//            };
+//            Thread t = new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    // this method is run in a worker thread
+//                    try {
+//                        // wait for 5 seconds to simulate a long network access
+//                        Thread.sleep(1000);
+//                    }
+//                    catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                    // Assume that we got our data from server
+//                    Bundle bundle = new Bundle();
+//                    bundle.putString(SERVER_RESPONSE, getString(R.string.fetch_network));
+//                    // notify main thread
+//                    Message msg = new Message();
+//                    msg.setData(bundle);
+//                    handler.sendMessage(msg);
+//                }
+//            });
+//            t.start();
+//            Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
+
+            AsyncTask<String, Integer, Bitmap> task = new AsyncTask<String, Integer, Bitmap>() {
                 @Override
-                public void handleMessage(Message msg) {
-                    // This method is executed in main thread
-                    String content = msg.getData().getString(SERVER_RESPONSE);
-                    Toast.makeText(getBaseContext(), content, Toast.LENGTH_LONG).show();
+                protected Bitmap doInBackground(String... strings) {
+                    sleep(2000);
+                    return null;
+                }
+                @Override
+                protected void onPostExecute(Bitmap bitmap) {
+                Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
                 }
             };
-            Thread t = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    // this method is run in a worker thread
-                    try {
-                        // wait for 5 seconds to simulate a long network access
-                        Thread.sleep(1000);
-                    }
-                    catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    // Assume that we got our data from server
-                    Bundle bundle = new Bundle();
-                    bundle.putString(SERVER_RESPONSE, getString(R.string.fetch_network));
-                    // notify main thread
-                    Message msg = new Message();
-                    msg.setData(bundle);
-                    handler.sendMessage(msg);
-                }
-            });
-            t.start();
-//            Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
+            task.execute("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
         }
         if (id == R.id.settings) {
             Intent intent = new Intent(this, PrefActivity.class);
