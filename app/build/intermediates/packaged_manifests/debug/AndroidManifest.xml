@@ -9,6 +9,7 @@
         android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <permission
         android:name="vn.edu.usth.weather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"

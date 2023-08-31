@@ -119,7 +119,7 @@ public class WeatherFragment extends Fragment {
                 iconImageView.setImageResource(icons[6]);
                 break;
         }
-        iconImageView.setId(View.generateViewId());
+        iconImageView.setId(R.id.weather_icon);
 
         // Create a RelativeLayout.LayoutParams object for the icon ImageView
         RelativeLayout.LayoutParams iconParams = new RelativeLayout.LayoutParams(300,300);

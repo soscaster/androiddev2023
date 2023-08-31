@@ -24,6 +24,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -35,11 +36,15 @@ import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.io.*;
 
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -243,12 +248,34 @@ public class WeatherActivity extends AppCompatActivity {
             AsyncTask<String, Integer, Bitmap> task = new AsyncTask<String, Integer, Bitmap>() {
                 @Override
                 protected Bitmap doInBackground(String... strings) {
-                    sleep(2000);
+//                    sleep(2000);
+                    // Make a request to server
+                    try {
+                        URL url = new URL("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
+                        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                        connection.setRequestMethod("GET");
+                        connection.setDoInput(true);
+                        connection.connect();
+                        int response = connection.getResponseCode();
+                        Log.i("USTHWeather", "The response is: " + response);
+                        InputStream is = connection.getInputStream();
+                        Bitmap bitmap = BitmapFactory.decodeStream(is);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                ImageView logo = (ImageView) findViewById(R.id.weather_icon);
+                                logo.setImageBitmap(bitmap);
+                            }
+                        });
+                    } catch (Exception e) {
+                        Log.i(TAG, "ERROR: " + e);
+                    }
                     return null;
                 }
+
                 @Override
                 protected void onPostExecute(Bitmap bitmap) {
-                Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
                 }
             };
             task.execute("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");

@@ -3525,6 +3525,7 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id weather
+id weather_icon
 id west
 id withText
 id with_icon

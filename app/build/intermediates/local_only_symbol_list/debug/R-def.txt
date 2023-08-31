@@ -44,6 +44,7 @@ id scrollView
 id settings
 id tab
 id weather
+id weather_icon
 layout activity_pref
 layout activity_weather
 layout fragment_forecast
