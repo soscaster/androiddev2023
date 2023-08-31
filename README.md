@@ -12,5 +12,4 @@ Student Info
 
 * Name: Nguyễn Quang Minh
 * ID: BI12-271
-* Group ID: (what is Group ID?)
-
+* Group ID: ICT Team 7
