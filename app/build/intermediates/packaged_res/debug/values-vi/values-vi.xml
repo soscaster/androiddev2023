@@ -37,6 +37,7 @@
         <item>4</item>
     </integer-array>
     <string name="app_name">USTH Thời Tiết</string>
+    <string name="fetch_network">Lấy thông tin từ Internet thành công!</string>
     <string name="hanoi">Hà Nội\nViệt Nam</string>
     <string name="hello_blank_fragment">Xin chào khoảng không trống</string>
     <string name="language">Ngôn ngữ</string>

@@ -54,6 +54,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
 string english
+string fetch_network
 string hanoi
 string hello_blank_fragment
 string language

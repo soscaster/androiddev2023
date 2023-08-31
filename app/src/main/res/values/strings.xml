@@ -11,4 +11,5 @@
     <string name="refreshed">You just pressed the Refresh button!</string>
     <string name="settings">Settings</string>
     <string name="pref_open">Preference Activity activated!</string>
+    <string name="fetch_network">Fetch from Internet successfully!</string>
 </resources>

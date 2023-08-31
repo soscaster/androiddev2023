@@ -3779,6 +3779,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fetch_network
 string hanoi
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior

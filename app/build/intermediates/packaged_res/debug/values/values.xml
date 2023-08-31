@@ -47,6 +47,7 @@
     <dimen name="weather_frame_size">145sp</dimen>
     <string name="app_name">USTH Weather</string>
     <string name="english" translatable="false">English</string>
+    <string name="fetch_network">Fetch from Internet successfully!</string>
     <string name="hanoi">Hanoi\nVietnam</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="language">Language</string>

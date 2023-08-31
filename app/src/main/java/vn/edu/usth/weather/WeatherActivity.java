@@ -1,5 +1,7 @@
 package vn.edu.usth.weather;
 
+import static com.google.android.material.internal.ContextUtils.getActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
@@ -23,7 +25,10 @@ import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.os.LocaleList;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -74,6 +79,8 @@ class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
 }
 public class WeatherActivity extends AppCompatActivity {
     private static final String TAG = "WeatherActivity";
+
+    public static final String SERVER_RESPONSE = "server_response";
     private String selectedLanguage;
     private static final String MP3_FILE_PATH = Environment.getExternalStorageDirectory() + "/Music/donate.mp3";
     private MediaPlayer mediaPlayer;
@@ -118,86 +125,6 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        // Get the shared preferences and retrieve the selected language
-        SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
-        selectedLanguage = preferences.getString("selectedLanguage", null);
-        return true;
-    }
-    @Override public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_language) {
-            String[] languages = {getString(R.string.english), getString(R.string.vietnamese)};
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle(getString(R.string.language));
-            builder.setSingleChoiceItems(languages, getCheckedItem(languages), new DialogInterface.OnClickListener()
-            {
-                @Override public void onClick(DialogInterface dialog, int which){
-                    selectedLanguage = languages[which];
-                    if (selectedLanguage.equals(getString(R.string.english)))
-                    {
-                        setAppLocale("en");
-                    }
-                    else if (selectedLanguage.equals(getString(R.string.vietnamese)))
-                    {
-                        setAppLocale("vi");
-                    }
-                    // Save the selected language in the shared preferences
-                    SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("selectedLanguage", selectedLanguage);
-                    editor.apply();
-                    recreate();
-                }
-            });
-            AlertDialog dialog = builder.create();
-            dialog.show();
-            return true;
-        }
-        if (id == R.id.refresh) {
-            Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
-        }
-        if (id == R.id.settings) {
-            Intent intent = new Intent(this, PrefActivity.class);
-            startActivity(intent);
-            Toast.makeText(getBaseContext(), R.string.pref_open, Toast.LENGTH_LONG).show();
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    private int getCheckedItem(String[] languages) {
-        // If the selected language is null, return -1 (no item checked)
-        if (selectedLanguage == null) {
-            return -1;
-        }
-        if (selectedLanguage.equals(getString(R.string.english))){
-            return 0;
-        }
-        if (selectedLanguage.equals(getString(R.string.vietnamese))){
-            return 1;
-        }
-        // Return -1 if no item checked
-        return -1;
-    }
-
-    // Define a method to set the app locale based on the language code
-    private void setAppLocale(String language) {
-        // Get the current configuration and set its locale to the given language
-        Resources resources = getResources();
-        Configuration configuration = resources.getConfiguration();
-        configuration.setLocale(new Locale(language));
-        // Update the configuration for the app context and resources
-        getApplicationContext().createConfigurationContext(configuration);
-        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
-
-        // Add these lines of code to update the app title as well
-        String appTitle = getString(R.string.app_name); // Get the app name from strings.xml
-        Activity activity = this; // Get the current activity
-        activity.setTitle(appTitle); // Set the app title with the new language
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
@@ -237,6 +164,115 @@ public class WeatherActivity extends AppCompatActivity {
         // Insert ForecastFragment
 //        ForecastFragment firstFragment = new ForecastFragment();
 //        getSupportFragmentManager().beginTransaction().add(R.id.container, firstFragment).commit();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        // Get the shared preferences and retrieve the selected language
+        SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
+        selectedLanguage = preferences.getString("selectedLanguage", null);
+        return true;
+    }
+    @Override public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_language) {
+            String[] languages = {getString(R.string.english), getString(R.string.vietnamese)};
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(getString(R.string.language));
+            builder.setSingleChoiceItems(languages, getCheckedItem(languages), new DialogInterface.OnClickListener()
+            {
+                @Override public void onClick(DialogInterface dialog, int which){
+                    selectedLanguage = languages[which];
+                    if (selectedLanguage.equals(getString(R.string.english)))
+                    {
+                        setAppLocale("en");
+                    }
+                    else if (selectedLanguage.equals(getString(R.string.vietnamese)))
+                    {
+                        setAppLocale("vi");
+                    }
+                    // Save the selected language in the shared preferences
+                    SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("selectedLanguage", selectedLanguage);
+                    editor.apply();
+                    recreate();
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            return true;
+        }
+        if (id == R.id.refresh) {
+            final Handler handler = new Handler(Looper.getMainLooper()) {
+                @Override
+                public void handleMessage(Message msg) {
+                    // This method is executed in main thread
+                    String content = msg.getData().getString(SERVER_RESPONSE);
+                    Toast.makeText(getBaseContext(), content, Toast.LENGTH_LONG).show();
+                }
+            };
+            Thread t = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    // this method is run in a worker thread
+                    try {
+                        // wait for 5 seconds to simulate a long network access
+                        Thread.sleep(1000);
+                    }
+                    catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    // Assume that we got our data from server
+                    Bundle bundle = new Bundle();
+                    bundle.putString(SERVER_RESPONSE, getString(R.string.fetch_network));
+                    // notify main thread
+                    Message msg = new Message();
+                    msg.setData(bundle);
+                    handler.sendMessage(msg);
+                }
+            });
+            t.start();
+//            Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
+        }
+        if (id == R.id.settings) {
+            Intent intent = new Intent(this, PrefActivity.class);
+            startActivity(intent);
+            Toast.makeText(getBaseContext(), R.string.pref_open, Toast.LENGTH_LONG).show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private int getCheckedItem(String[] languages) {
+        // If the selected language is null, return -1 (no item checked)
+        if (selectedLanguage == null) {
+            return -1;
+        }
+        if (selectedLanguage.equals(getString(R.string.english))){
+            return 0;
+        }
+        if (selectedLanguage.equals(getString(R.string.vietnamese))){
+            return 1;
+        }
+        // Return -1 if no item checked
+        return -1;
+    }
+
+    // Define a method to set the app locale based on the language code
+    private void setAppLocale(String language) {
+        // Get the current configuration and set its locale to the given language
+        Resources resources = getResources();
+        Configuration configuration = resources.getConfiguration();
+        configuration.setLocale(new Locale(language));
+        // Update the configuration for the app context and resources
+        getApplicationContext().createConfigurationContext(configuration);
+        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
+
+        // Add these lines of code to update the app title as well
+        String appTitle = getString(R.string.app_name); // Get the app name from strings.xml
+        Activity activity = this; // Get the current activity
+        activity.setTitle(appTitle); // Set the app title with the new language
     }
 
     @Override
