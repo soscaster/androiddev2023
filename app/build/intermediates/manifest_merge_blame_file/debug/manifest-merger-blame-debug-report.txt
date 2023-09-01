@@ -9,92 +9,92 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-11-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:5:5-81
-11-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:5:22-78
+11-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:5:5-81
+11-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:5:22-78
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:6:5-67
-12-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:6:22-64
+12-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:6:5-67
+12-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:6:22-64
 13
 14    <permission
-14-->[androidx.core:core:1.9.0] /Users/soscaster/.gradle/caches/transforms-3/0bb5616a7558933ce9ef66db5210a361/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+14-->[androidx.core:core:1.9.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 15        android:name="vn.edu.usth.weather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-15-->[androidx.core:core:1.9.0] /Users/soscaster/.gradle/caches/transforms-3/0bb5616a7558933ce9ef66db5210a361/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+15-->[androidx.core:core:1.9.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 16        android:protectionLevel="signature" />
-16-->[androidx.core:core:1.9.0] /Users/soscaster/.gradle/caches/transforms-3/0bb5616a7558933ce9ef66db5210a361/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+16-->[androidx.core:core:1.9.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 17
 18    <uses-permission android:name="vn.edu.usth.weather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-18-->[androidx.core:core:1.9.0] /Users/soscaster/.gradle/caches/transforms-3/0bb5616a7558933ce9ef66db5210a361/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-18-->[androidx.core:core:1.9.0] /Users/soscaster/.gradle/caches/transforms-3/0bb5616a7558933ce9ef66db5210a361/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+18-->[androidx.core:core:1.9.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.9.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 19
 20    <application
-20-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:8:5-30:19
+20-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:8:5-30:19
 21        android:allowBackup="true"
-21-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:9:9-35
+21-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:9:9-35
 22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.9.0] /Users/soscaster/.gradle/caches/transforms-3/0bb5616a7558933ce9ef66db5210a361/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+22-->[androidx.core:core:1.9.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\0bb5616a7558933ce9ef66db5210a361\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 23        android:dataExtractionRules="@xml/data_extraction_rules"
-23-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:10:9-65
+23-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:10:9-65
 24        android:debuggable="true"
 25        android:extractNativeLibs="false"
 26        android:fullBackupContent="@xml/backup_rules"
-26-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:11:9-54
+26-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:11:9-54
 27        android:icon="@mipmap/ic_launcher"
-27-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:12:9-43
+27-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:12:9-43
 28        android:label="@string/app_name"
-28-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:13:9-41
+28-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:13:9-41
 29        android:requestLegacyExternalStorage="true"
-29-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:14:9-52
+29-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:14:9-52
 30        android:roundIcon="@mipmap/ic_launcher_round"
-30-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:15:9-54
+30-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:15:9-54
 31        android:supportsRtl="true"
-31-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:16:9-35
+31-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:16:9-35
 32        android:testOnly="true"
 33        android:theme="@style/Theme.USTHWeather" >
-33-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:17:9-49
+33-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:17:9-49
 34        <activity
-34-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:18:9-20:40
+34-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:18:9-20:40
 35            android:name="vn.edu.usth.weather.PrefActivity"
-35-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:19:13-41
+35-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:19:13-41
 36            android:exported="false" />
-36-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:20:13-37
+36-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:20:13-37
 37        <activity
-37-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:21:9-29:20
+37-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:21:9-29:20
 38            android:name="vn.edu.usth.weather.WeatherActivity"
-38-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:22:13-44
+38-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:22:13-44
 39            android:exported="true" >
-39-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:23:13-36
+39-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:23:13-36
 40            <intent-filter>
-40-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:24:13-28:29
+40-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:24:13-28:29
 41                <action android:name="android.intent.action.MAIN" />
-41-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:25:17-69
-41-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:25:25-66
+41-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:25:17-69
+41-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:25:25-66
 42
 43                <category android:name="android.intent.category.LAUNCHER" />
-43-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:27:17-77
-43-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:27:27-74
+43-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:27:17-77
+43-->D:\DropboxSync\Dropbox\USTHWeather\app\src\main\AndroidManifest.xml:27:27-74
 44            </intent-filter>
 45        </activity>
 46
 47        <provider
-47-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+47-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 48            android:name="androidx.startup.InitializationProvider"
-48-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
 49            android:authorities="vn.edu.usth.weather.androidx-startup"
-49-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
 50            android:exported="false" >
-50-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+50-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 51            <meta-data
-51-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+51-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 52                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-52-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 53                android:value="androidx.startup" />
-53-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\316a02c860c73ab94686517a17339332\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 54            <meta-data
-54-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/soscaster/.gradle/caches/transforms-3/b53648139df62eed3ac1693b02c07adb/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+54-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\b53648139df62eed3ac1693b02c07adb\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 55                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-55-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/soscaster/.gradle/caches/transforms-3/b53648139df62eed3ac1693b02c07adb/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+55-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\b53648139df62eed3ac1693b02c07adb\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 56                android:value="androidx.startup" />
-56-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/soscaster/.gradle/caches/transforms-3/b53648139df62eed3ac1693b02c07adb/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+56-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Nguyen Quang Minh\.gradle\caches\transforms-3\b53648139df62eed3ac1693b02c07adb\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 57        </provider>
 58    </application>
 59

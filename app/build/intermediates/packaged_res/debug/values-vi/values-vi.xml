@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="condition">
-        <item>Mây vài nơi</item>
-        <item>Trời nắng</item>
-        <item>Trời mưa</item>
-        <item>Nhiều mây</item>
-        <item>Gió mạnh</item>
+        <item>Trời quang</item>
+        <item>Khá quang</item>
+        <item>Có sương</item>
+        <item>Mưa nhỏ</item>
+        <item>Mưa nhỏ, lạnh</item>
+        <item>Mưa vừa</item>
+        <item>Mưa vừa, lạnh</item>
         <item>Có tuyết</item>
+        <item>Tuyết rơi vừa</item>
+        <item>Mưa to</item>
+        <item>Mưa tuyết</item>
         <item>Có bão</item>
+        <item>Bão lớn</item>
     </string-array>
     <string-array name="days_of_the_week">
         <item>Thứ 2</item>
@@ -37,7 +43,10 @@
         <item>4</item>
     </integer-array>
     <string name="app_name">USTH Thời Tiết</string>
+    <string name="error_checklog">Đã có lỗi! Kiểm tra logcat NGAY!</string>
+    <string name="fetch_forecast_complete">Lấy dữ liệu từ API Dự báo thành công!</string>
     <string name="fetch_network">Lấy thông tin từ Internet thành công!</string>
+    <string name="fetch_weather_complete">Lấy dữ liệu từ API Thời tiết thành công!</string>
     <string name="hanoi">Hà Nội\nViệt Nam</string>
     <string name="hello_blank_fragment">Xin chào khoảng không trống</string>
     <string name="language">Ngôn ngữ</string>

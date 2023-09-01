@@ -10,13 +10,19 @@
         <item>Sun</item>
     </string-array>
     <string-array name="condition">
-        <item>Partly cloudy</item>
-        <item>Sunny</item>
-        <item>Rainy</item>
-        <item>Cloudy</item>
-        <item>Windy</item>
-        <item>Snowy</item>
-        <item>Stormy</item>
+        <item>Clear sky</item>
+        <item>Mainly clear</item>
+        <item>Fog</item>
+        <item>Drizzle</item>
+        <item>Freezing Drizzle</item>
+        <item>Rain</item>
+        <item>Freezing Rain</item>
+        <item>Snow fall</item>
+        <item>Snow grains</item>
+        <item>Rain showers</item>
+        <item>Snow showers</item>
+        <item>Thunderstorm</item>
+        <item>Super Thunderstorm</item>
     </string-array>
     <integer-array name="degrees">
         <item>25</item>

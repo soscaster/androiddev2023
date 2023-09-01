@@ -1,7 +1,7 @@
-#Thu Aug 31 12:00:29 ICT 2023
-base.0=/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
+#Fri Sep 01 22:28:05 JST 2023
+base.0=D\:\\DropboxSync\\Dropbox\\USTHWeather\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=D\:\\DropboxSync\\Dropbox\\USTHWeather\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=D\:\\DropboxSync\\Dropbox\\USTHWeather\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=6/classes.dex

@@ -7,6 +7,12 @@
     android:id="@+id/weather"
     tools:context=".WeatherFragment">
 
+    <TextView
+        android:id="@+id/weather_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </TextView>
+
     <ImageView
         android:id="@+id/weather_icon"
         android:layout_width="match_parent"

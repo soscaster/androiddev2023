@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="condition">
-        <item>Partly cloudy</item>
-        <item>Sunny</item>
-        <item>Rainy</item>
-        <item>Cloudy</item>
-        <item>Windy</item>
-        <item>Snowy</item>
-        <item>Stormy</item>
+        <item>Clear sky</item>
+        <item>Mainly clear</item>
+        <item>Fog</item>
+        <item>Drizzle</item>
+        <item>Freezing Drizzle</item>
+        <item>Rain</item>
+        <item>Freezing Rain</item>
+        <item>Snow fall</item>
+        <item>Snow grains</item>
+        <item>Rain showers</item>
+        <item>Snow showers</item>
+        <item>Thunderstorm</item>
+        <item>Super Thunderstorm</item>
     </string-array>
     <string-array name="days_of_the_week">
         <item>Mon</item>
@@ -47,10 +53,22 @@
     <dimen name="weather_frame_size">145sp</dimen>
     <string name="app_name">USTH Weather</string>
     <string name="english" translatable="false">English</string>
+    <string name="error_checklog">Error occurred! Check logcat NOW!</string>
+    <string name="fetch_forecast_complete">Fetch from Forecast API completed!</string>
     <string name="fetch_network">Fetch from Internet successfully!</string>
+    <string name="fetch_weather_complete">Fetch from Weather API completed!</string>
     <string name="hanoi">Hanoi\nVietnam</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="language">Language</string>
+    <string name="lat_Hanoi" translatable="false">21</string>
+    <string name="lat_Paris" translatable="false">48.8534</string>
+    <string name="lat_Toulouse" translatable="false">43.6043</string>
+    <string name="location_Hanoi" translatable="false">Hanoi,vn</string>
+    <string name="location_Paris" translatable="false">Paris,fr</string>
+    <string name="location_Toulouse" translatable="false">Toulouse,fr</string>
+    <string name="long_Hanoi" translatable="false">105.875</string>
+    <string name="long_Paris" translatable="false">2.3488</string>
+    <string name="long_Toulouse" translatable="false">1.4437</string>
     <string name="paris">Paris\nFrance</string>
     <string name="pref_open">Preference Activity activated!</string>
     <string name="refreshed">You just pressed the Refresh button!</string>

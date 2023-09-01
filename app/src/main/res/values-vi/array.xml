@@ -10,13 +10,19 @@
         <item>CN</item>
     </string-array>
     <string-array name="condition">
-        <item>Mây vài nơi</item>
-        <item>Trời nắng</item>
-        <item>Trời mưa</item>
-        <item>Nhiều mây</item>
-        <item>Gió mạnh</item>
+        <item>Trời quang</item>
+        <item>Khá quang</item>
+        <item>Có sương</item>
+        <item>Mưa nhỏ</item>
+        <item>Mưa nhỏ, lạnh</item>
+        <item>Mưa vừa</item>
+        <item>Mưa vừa, lạnh</item>
         <item>Có tuyết</item>
+        <item>Tuyết rơi vừa</item>
+        <item>Mưa to</item>
+        <item>Mưa tuyết</item>
         <item>Có bão</item>
+        <item>Bão lớn</item>
     </string-array>
     <integer-array name="degrees">
         <item>25</item>
