@@ -24,4 +24,6 @@
     <string name="lat_Toulouse" translatable="false">43.6043</string>
     <string name="long_Toulouse" translatable="false">1.4437</string>
     <string name="fetch_weather_complete">Fetch from Weather API completed!</string>
+    <string name="check_Internet">You are currently offline.\nPlease check the Internet connection.</string>
+    <string name="dev_in_progress">This function is developing at the moment.</string>
 </resources>

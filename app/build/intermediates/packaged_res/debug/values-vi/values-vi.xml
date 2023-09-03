@@ -43,6 +43,8 @@
         <item>4</item>
     </integer-array>
     <string name="app_name">USTH Thời Tiết</string>
+    <string name="check_Internet">Bạn đang ngoại tuyến.\nVui lòng kiểm tra kết nối Internet.</string>
+    <string name="dev_in_progress">Tính năng này hiện đang phát triển.</string>
     <string name="error_checklog">Đã có lỗi! Kiểm tra logcat NGAY!</string>
     <string name="fetch_forecast_complete">Lấy dữ liệu từ API Dự báo thành công!</string>
     <string name="fetch_network">Lấy thông tin từ Internet thành công!</string>

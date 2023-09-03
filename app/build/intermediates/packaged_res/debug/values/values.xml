@@ -52,6 +52,8 @@
     <color name="white">#FFFFFFFF</color>
     <dimen name="weather_frame_size">145sp</dimen>
     <string name="app_name">USTH Weather</string>
+    <string name="check_Internet">You are currently offline.\nPlease check the Internet connection.</string>
+    <string name="dev_in_progress">This function is developing at the moment.</string>
     <string name="english" translatable="false">English</string>
     <string name="error_checklog">Error occurred! Check logcat NOW!</string>
     <string name="fetch_forecast_complete">Fetch from Forecast API completed!</string>

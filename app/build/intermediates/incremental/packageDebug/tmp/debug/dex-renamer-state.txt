@@ -1,4 +1,4 @@
-#Fri Sep 01 22:28:05 JST 2023
+#Sun Sep 03 10:55:33 JST 2023
 base.0=D\:\\DropboxSync\\Dropbox\\USTHWeather\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=D\:\\DropboxSync\\Dropbox\\USTHWeather\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=D\:\\DropboxSync\\Dropbox\\USTHWeather\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex

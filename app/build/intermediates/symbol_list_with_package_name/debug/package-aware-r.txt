@@ -3274,6 +3274,7 @@ id line3
 id linear
 id listMode
 id list_item
+id logo
 id m3_side_sheet
 id marquee
 id masked
@@ -3373,6 +3374,7 @@ id percent
 id pin
 id position
 id postLayout
+id pref
 id pressed
 id progress_circular
 id progress_horizontal
@@ -3774,7 +3776,9 @@ string bottomsheet_drag_handle_content_description
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
+string check_Internet
 string clear_text_end_icon_content_description
+string dev_in_progress
 string english
 string error_a11y_label
 string error_checklog

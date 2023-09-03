@@ -30,11 +30,11 @@ import java.util.HashMap;
 
 public class WeatherFragment extends Fragment {
 
+    private String city;
+
     public WeatherFragment() {
         // Required empty public constructor
     }
-
-    private String city;
 
     public static WeatherFragment newInstance(String city) {
         WeatherFragment fragment = new WeatherFragment();
@@ -69,6 +69,19 @@ public class WeatherFragment extends Fragment {
 //        int[] icons = {R.drawable.cloudy_1, R.drawable.sunny, R.drawable.rainy_1, R.drawable.cloudy_2, R.drawable.rainy_2, R.drawable.snowy, R.drawable.stormy};
 
         ImageView iconImageView = new ImageView(getActivity());
+        iconImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int width = iconImageView.getWidth();
+                int height = iconImageView.getHeight();
+
+                ViewGroup.LayoutParams lp = iconImageView.getLayoutParams();
+                lp.width = width / 2;
+                lp.height = height / 2;
+                iconImageView.setLayoutParams(lp);
+            }
+        });
+
         String city = getArguments().getString("city");
         HashMap<String, String> locations = new HashMap<String, String>();
         locations.put(getString(R.string.hanoi), getString(R.string.location_Hanoi));

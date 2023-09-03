@@ -31,6 +31,8 @@ import android.content.res.Resources;
 //import android.graphics.Bitmap;
 //import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -41,6 +43,7 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 //import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -96,10 +99,10 @@ class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
     }
 }
 public class WeatherActivity extends AppCompatActivity {
-    private static final String TAG = "WeatherActivity";
     public static final String SERVER_RESPONSE = "server_response";
-    private String selectedLanguage;
+    private static final String TAG = "WeatherActivity";
     private static final String MP3_FILE_PATH = Environment.getExternalStorageDirectory() + "/Music/wonderhoy.mp3";
+    private String selectedLanguage;
     private MediaPlayer mediaPlayer;
     private void extractMP3File() {
         try {
@@ -194,7 +197,7 @@ public class WeatherActivity extends AppCompatActivity {
                     Intent intent = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
                     PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 123456, intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
                     AlarmManager alarmManager = (AlarmManager) getBaseContext().getSystemService(Context.ALARM_SERVICE);
-                    alarmManager.set(AlarmManager.RTC, System.currentTimeMillis() + 1 * 1_000L, pendingIntent);
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 1 * 1_000L, pendingIntent);
                     finish();
                 }
             });
@@ -203,7 +206,13 @@ public class WeatherActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.refresh) {
-            recreate();
+//            recreate();
+              Toast.makeText(getBaseContext(), R.string.dev_in_progress, Toast.LENGTH_SHORT).show();
+        }
+        if (id == R.id.settings) {
+            Intent intent = new Intent(this, PrefActivity.class);
+            startActivity(intent);
+            Toast.makeText(getBaseContext(), R.string.pref_open, Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -247,15 +256,24 @@ public class WeatherActivity extends AppCompatActivity {
 //            setAppLocale("en");
 //        }
 
-        PagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager(), this);
-        ViewPager pager = (ViewPager) findViewById(R.id.pager);
-        pager.setOffscreenPageLimit(3);
-        pager.setAdapter(adapter);
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
-        tabLayout.setupWithViewPager(pager);
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        if (activeNetwork != null && activeNetwork.isConnectedOrConnecting()) {
+            PagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager(), this);
+            ViewPager pager = (ViewPager) findViewById(R.id.pager);
+            pager.setOffscreenPageLimit(3);
+            pager.setAdapter(adapter);
+            TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
+            tabLayout.setupWithViewPager(pager);
 
-        extractMP3File();
-        playMP3File();
+            extractMP3File();
+            playMP3File();
+        } else {
+            TextView textView = new TextView(this);
+            textView.setText(R.string.check_Internet);
+            textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            setContentView(textView);
+        }
 
         Log.i(TAG, "LOG: onCreate - New process");
 

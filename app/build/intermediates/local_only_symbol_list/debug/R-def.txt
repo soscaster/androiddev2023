@@ -38,7 +38,9 @@ drawable sunny
 id action_language
 id fragment_forecast
 id fragment_weather
+id logo
 id pager
+id pref
 id refresh
 id scrollView
 id settings
@@ -55,6 +57,8 @@ menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string check_Internet
+string dev_in_progress
 string english
 string error_checklog
 string fetch_forecast_complete
