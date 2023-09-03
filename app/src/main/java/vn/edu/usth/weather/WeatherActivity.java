@@ -43,6 +43,7 @@ import android.os.Environment;
 //import android.os.Message;
 import android.os.LocaleList;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -280,6 +281,21 @@ public class WeatherActivity extends AppCompatActivity {
             Intent intent = new Intent(this, PrefActivity.class);
             startActivity(intent);
             Toast.makeText(getBaseContext(), R.string.pref_open, Toast.LENGTH_SHORT).show();
+        }
+        if (id == R.id.about) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(R.string.app_about);
+            builder.setMessage(R.string.about_message);
+            builder.setIcon(R.drawable.ic_smile);
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

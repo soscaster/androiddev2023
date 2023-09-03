@@ -42,6 +42,8 @@
         <item>9</item>
         <item>4</item>
     </integer-array>
+    <string name="about_message">Chào! Tôi là Nguyễn Quang Minh!\nVà tôi thích những cái ôm ấm áp!\nEmail:minhnq.bi12-271@st.usth.edu.vn</string>
+    <string name="app_about">Về cá nhân</string>
     <string name="app_name">USTH Thời Tiết</string>
     <string name="check_Internet">Bạn đang ngoại tuyến.\nVui lòng kiểm tra kết nối Internet.</string>
     <string name="dev_in_progress">Tính năng này hiện đang phát triển.</string>

@@ -27,4 +27,6 @@
     <string name="check_Internet">You are currently offline.\nPlease check the Internet connection.</string>
     <string name="dev_in_progress">This function is developing at the moment.</string>
     <string name="refresh">Refresh</string>
+    <string name="app_about">About me</string>
+    <string name="about_message">Hello! I am Nguyen Quang Minh!\nAnd I like warm hugs!\nEmail: minhnq.bi12-271@st.usth.edu.vn</string>
 </resources>

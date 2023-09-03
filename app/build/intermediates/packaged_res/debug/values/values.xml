@@ -51,6 +51,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="weather_frame_size">145sp</dimen>
+    <string name="about_message">Hello! I am Nguyen Quang Minh!\nAnd I like warm hugs!\nEmail: minhnq.bi12-271@st.usth.edu.vn</string>
+    <string name="app_about">About me</string>
     <string name="app_name">USTH Weather</string>
     <string name="check_Internet">You are currently offline.\nPlease check the Internet connection.</string>
     <string name="dev_in_progress">This function is developing at the moment.</string>

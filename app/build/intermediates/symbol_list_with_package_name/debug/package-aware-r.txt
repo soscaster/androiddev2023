@@ -2929,6 +2929,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable frame
+drawable ic_about
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -2946,6 +2947,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_refresh
 drawable ic_search_black_24
 drawable ic_settings
+drawable ic_smile
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3047,6 +3049,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id about
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3764,7 +3767,9 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string about_message
 string androidx_startup
+string app_about
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior

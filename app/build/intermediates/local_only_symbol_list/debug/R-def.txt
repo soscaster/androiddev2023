@@ -17,11 +17,13 @@ drawable cloudy_1
 drawable cloudy_2
 drawable cloudy_sun
 drawable frame
+drawable ic_about
 drawable ic_language
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_refresh
 drawable ic_settings
+drawable ic_smile
 drawable night_clear
 drawable night_cloudy_1
 drawable night_cloudy_2
@@ -35,6 +37,7 @@ drawable rainy_2
 drawable snowy
 drawable stormy
 drawable sunny
+id about
 id action_language
 id fragment_forecast
 id fragment_weather
@@ -56,6 +59,8 @@ layout fragment_weather_and_forecast
 menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+string about_message
+string app_about
 string app_name
 string check_Internet
 string dev_in_progress

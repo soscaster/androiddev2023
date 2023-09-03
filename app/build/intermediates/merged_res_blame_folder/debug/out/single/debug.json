@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-mdpi_ic_about.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-mdpi/ic_about.png"
+    },
+    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable_frame.png.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/frame.png"
     },
@@ -24,6 +28,10 @@
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-anydpi/ic_refresh.xml"
     },
     {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-anydpi_ic_about.xml.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-anydpi/ic_about.xml"
+    },
+    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-xhdpi_ic_settings.png.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xhdpi/ic_settings.png"
     },
@@ -40,16 +48,20 @@
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/snowy.png"
     },
     {
-        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/layout_fragment_weather.xml.flat",
-        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/layout/fragment_weather.xml"
-    },
-    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-xhdpi_ic_language.png.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xhdpi/ic_language.png"
     },
     {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/layout_fragment_weather.xml.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/layout/fragment_weather.xml"
+    },
+    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-anydpi_ic_settings.xml.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-anydpi/ic_settings.xml"
+    },
+    {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-anydpi_ic_smile.xml.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-anydpi/ic_smile.xml"
     },
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/xml_backup_rules.xml.flat",
@@ -58,6 +70,10 @@
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/menu_menu.xml.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/menu/menu.xml"
+    },
+    {
+        "merged": "vn.edu.usth.weather.app-merged_res-28:/drawable-hdpi_ic_smile.png.flat",
+        "source": "vn.edu.usth.weather.app-main-30:/drawable-hdpi/ic_smile.png"
     },
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-hdpi_ic_settings.png.flat",
@@ -88,6 +104,10 @@
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/mipmap-mdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-xhdpi_ic_about.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xhdpi/ic_about.png"
+    },
+    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/mipmap-xxhdpi/ic_launcher.png"
     },
@@ -98,6 +118,10 @@
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable_night_rainy_1.png.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/night_rainy_1.png"
+    },
+    {
+        "merged": "vn.edu.usth.weather.app-merged_res-28:/drawable-xhdpi_ic_smile.png.flat",
+        "source": "vn.edu.usth.weather.app-main-30:/drawable-xhdpi/ic_smile.png"
     },
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-hdpi_ic_refresh.png.flat",
@@ -112,20 +136,28 @@
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/cloudy_1.png"
     },
     {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-xhdpi_ic_smile.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xhdpi/ic_smile.png"
+    },
+    {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-mdpi_ic_smile.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-mdpi/ic_smile.png"
+    },
+    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-mdpi_ic_settings.png.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-mdpi/ic_settings.png"
     },
     {
-        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable_stormy.png.flat",
-        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/stormy.png"
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable_rainy_1.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/rainy_1.png"
     },
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-xxhdpi_ic_settings.png.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xxhdpi/ic_settings.png"
     },
     {
-        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable_rainy_1.png.flat",
-        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/rainy_1.png"
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable_stormy.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/stormy.png"
     },
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable_cloudy_2.png.flat",
@@ -156,6 +188,10 @@
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/night_stormy.png"
     },
     {
+        "merged": "vn.edu.usth.weather.app-merged_res-28:/drawable-xxhdpi_ic_smile.png.flat",
+        "source": "vn.edu.usth.weather.app-main-30:/drawable-xxhdpi/ic_smile.png"
+    },
+    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-anydpi_ic_language.xml.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-anydpi/ic_language.xml"
     },
@@ -164,12 +200,28 @@
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/rainy_2.png"
     },
     {
+        "merged": "vn.edu.usth.weather.app-merged_res-28:/drawable-anydpi_ic_smile.xml.flat",
+        "source": "vn.edu.usth.weather.app-main-30:/drawable-anydpi/ic_smile.xml"
+    },
+    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-xhdpi_ic_refresh.png.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xhdpi/ic_refresh.png"
+    },
+    {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-xxhdpi_ic_smile.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xxhdpi/ic_smile.png"
+    },
+    {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-xxhdpi_ic_about.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xxhdpi/ic_about.png"
+    },
+    {
+        "merged": "vn.edu.usth.weather.app-merged_res-28:/drawable-mdpi_ic_smile.png.flat",
+        "source": "vn.edu.usth.weather.app-main-30:/drawable-mdpi/ic_smile.png"
     },
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -196,6 +248,10 @@
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable/night_snow.png"
     },
     {
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-hdpi_ic_about.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-hdpi/ic_about.png"
+    },
+    {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/mipmap-xxxhdpi/ic_launcher.png"
     },
@@ -204,12 +260,12 @@
         "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-xxhdpi/ic_language.png"
     },
     {
-        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/layout_activity_pref.xml.flat",
-        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/layout/activity_pref.xml"
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable-hdpi_ic_smile.png.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/drawable-hdpi/ic_smile.png"
     },
     {
-        "merged": "vn.edu.usth.weather.app-merged_res-28:/menu_menu.xml.flat",
-        "source": "vn.edu.usth.weather.app-main-30:/menu/menu.xml"
+        "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/layout_activity_pref.xml.flat",
+        "source": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-main-30:/layout/activity_pref.xml"
     },
     {
         "merged": "/Users/soscaster/.gradle/daemon/8.0/vn.edu.usth.weather.app-merged_res-28:/drawable_night_cloudy_moon.png.flat",
