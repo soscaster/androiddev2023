@@ -78,6 +78,7 @@ string long_Paris
 string long_Toulouse
 string paris
 string pref_open
+string refresh
 string refreshed
 string settings
 string toulouse

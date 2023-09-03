@@ -26,6 +26,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 //import android.graphics.Bitmap;
@@ -40,6 +41,7 @@ import android.os.Environment;
 //import android.os.LocaleList;
 //import android.os.Looper;
 //import android.os.Message;
+import android.os.LocaleList;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -141,6 +143,17 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
+//    @Override
+//    protected void attachBaseContext(Context base) {
+//        super.attachBaseContext(base);
+//        // Get the selected language from the shared preferences
+//        SharedPreferences preferences = base.getSharedPreferences("language", MODE_PRIVATE);
+//        String selectedLanguage = preferences.getString("selectedLanguage", null);
+//        if (selectedLanguage != null)
+//        {
+//            setAppLocale(base, selectedLanguage);
+//        }
+//    }
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
@@ -153,18 +166,34 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
+//    private void setAppLocale(Context context, String language) {
+//        // Get the current configuration and set its locale to the given language
+//        Resources resources = context.getResources();
+//        Configuration configuration = resources.getConfiguration();
+//        configuration.setLocale(new Locale(language));
+//
+//        context.getResources().updateConfiguration(configuration, context.getResources().getDisplayMetrics());
+//    }
+
     private void setAppLocale(Context context, String language) {
         // Get the current configuration and set its locale to the given language
-        Resources resources = context.getResources();
-        Configuration configuration = resources.getConfiguration();
+        Configuration configuration = context.getResources().getConfiguration();
         configuration.setLocale(new Locale(language));
 
+        // Use the new API to set the application locales
+//        LocaleList locales = new LocaleList(new Locale(language));
         context.getResources().updateConfiguration(configuration, context.getResources().getDisplayMetrics());
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
+        Locale locale = newConfig.getLocales().get(0);
+
+        Configuration configuration = getBaseContext().getResources().getConfiguration();
+        configuration.setLocale(locale);
+        getBaseContext().getResources().updateConfiguration(configuration, getBaseContext().getResources().getDisplayMetrics());
+
         String appTitle = getString(R.string.app_name);
         Activity activity = this;
         activity.setTitle(appTitle);
@@ -172,6 +201,46 @@ public class WeatherActivity extends AppCompatActivity {
 
     @Override public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+//        if (id == R.id.action_language) {
+//            String[] languages = {getString(R.string.english), getString(R.string.vietnamese)};
+//            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//            builder.setTitle(getString(R.string.language));
+//            builder.setSingleChoiceItems(languages, getCheckedItem(languages), new DialogInterface.OnClickListener()
+//            {
+//                @Override public void onClick(DialogInterface dialog, int which){
+//                    selectedLanguage = languages[which];
+//                    if (selectedLanguage.equals(getString(R.string.english)))
+//                    {
+//                        setAppLocale(getApplicationContext(), "en");
+//                    }
+//                    else if (selectedLanguage.equals(getString(R.string.vietnamese)))
+//                    {
+//                        setAppLocale(getApplicationContext(), "vi");
+//                    }
+//                    // Save the selected language in the shared preferences
+//                    SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
+//                    SharedPreferences.Editor editor = preferences.edit();
+//                    editor.putString("selectedLanguage", selectedLanguage);
+//                    editor.apply();
+//
+////                    Intent intent = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+////                    PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 123456, intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+////                    AlarmManager alarmManager = (AlarmManager) getBaseContext().getSystemService(Context.ALARM_SERVICE);
+////                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 1 * 1_000L, pendingIntent);
+////                    finish();
+//
+//                    Context ctx = getApplicationContext();
+//                    PackageManager pm = ctx.getPackageManager();
+//                    Intent intent = pm.getLaunchIntentForPackage(ctx.getPackageName());
+//                    Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
+//                    ctx.startActivity(mainIntent);
+//                    Runtime.getRuntime().exit(0);
+//                }
+//            });
+//            AlertDialog dialog = builder.create();
+//            dialog.show();
+//            return true;
+//        }
         if (id == R.id.action_language) {
             String[] languages = {getString(R.string.english), getString(R.string.vietnamese)};
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -193,12 +262,10 @@ public class WeatherActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("selectedLanguage", selectedLanguage);
                     editor.apply();
-
-                    Intent intent = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
-                    PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 123456, intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-                    AlarmManager alarmManager = (AlarmManager) getBaseContext().getSystemService(Context.ALARM_SERVICE);
-                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 1 * 1_000L, pendingIntent);
+                    // Restart the activity to apply the new locale
+                    Intent intent = getIntent();
                     finish();
+                    startActivity(intent);
                 }
             });
             AlertDialog dialog = builder.create();
@@ -217,6 +284,20 @@ public class WeatherActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+//    private int getCheckedItem(String[] languages) {
+//        // If the selected language is null, return -1 (no item checked)
+//        if (selectedLanguage == null) {
+//            return -1;
+//        }
+//        if (selectedLanguage.equals(getString(R.string.english))){
+//            return 0;
+//        }
+//        if (selectedLanguage.equals(getString(R.string.vietnamese))){
+//            return 1;
+//        }
+//        // Return -1 if no item checked
+//        return -1;
+//    }
     private int getCheckedItem(String[] languages) {
         // If the selected language is null, return -1 (no item checked)
         if (selectedLanguage == null) {
@@ -235,6 +316,19 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
+//        String selectedLanguage = preferences.getString("selectedLanguage", null);
+//        if (selectedLanguage != null)
+//        {
+//            if (selectedLanguage.equals(getString(R.string.english)))
+//            {
+//                setAppLocale(getBaseContext(),"en");
+//            }
+//            else if (selectedLanguage.equals(getString(R.string.vietnamese)))
+//            {
+//                setAppLocale(getBaseContext(),"vi");
+//            }
+//        }
         SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
         String selectedLanguage = preferences.getString("selectedLanguage", null);
         if (selectedLanguage != null)

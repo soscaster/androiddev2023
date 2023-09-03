@@ -3910,6 +3910,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string pref_open
+string refresh
 string refreshed
 string search_menu_title
 string searchbar_scrolling_view_behavior

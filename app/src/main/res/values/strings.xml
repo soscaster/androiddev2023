@@ -26,4 +26,5 @@
     <string name="fetch_weather_complete">Fetch from Weather API completed!</string>
     <string name="check_Internet">You are currently offline.\nPlease check the Internet connection.</string>
     <string name="dev_in_progress">This function is developing at the moment.</string>
+    <string name="refresh">Refresh</string>
 </resources>

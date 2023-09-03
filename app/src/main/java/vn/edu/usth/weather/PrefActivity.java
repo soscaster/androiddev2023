@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GestureDetectorCompat;
 import androidx.core.view.VelocityTrackerCompat;
 
+import android.content.Context;
 import android.graphics.Bitmap;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
@@ -16,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -109,24 +113,34 @@ public class PrefActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pref);
-        RequestQueue queue = newRequestQueue(getBaseContext());
-        Response.Listener<Bitmap> listener = new Response.Listener<Bitmap>() {
-            @Override
-            public void onResponse(Bitmap response) {
-                ImageView iv = (ImageView) findViewById(R.id.logo);
-                iv.setImageBitmap(response);
-                detector = new GestureDetectorCompat(PrefActivity.this, new TouchGestureListener());
-                iv.setOnTouchListener(new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View view, MotionEvent motionEvent) {
-                        return onTouchEvent(motionEvent);
-                    }
-                });
-            }
-        };
-        ImageRequest imageRequest = new ImageRequest("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png", listener, 0, 0, ImageView.ScaleType.CENTER, Bitmap.Config.ARGB_8888,null);
-        queue.add(imageRequest);
-        logo = findViewById(R.id.logo);
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        if (activeNetwork != null && activeNetwork.isConnectedOrConnecting()) {
+            RequestQueue queue = newRequestQueue(getBaseContext());
+            Response.Listener<Bitmap> listener = new Response.Listener<Bitmap>() {
+                @Override
+                public void onResponse(Bitmap response) {
+                    ImageView iv = (ImageView) findViewById(R.id.logo);
+                    iv.setImageBitmap(response);
+                    detector = new GestureDetectorCompat(PrefActivity.this, new TouchGestureListener());
+                    iv.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            return onTouchEvent(motionEvent);
+                        }
+                    });
+                }
+            };
+            ImageRequest imageRequest = new ImageRequest("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png", listener, 0, 0, ImageView.ScaleType.CENTER, Bitmap.Config.ARGB_8888, null);
+            queue.add(imageRequest);
+            logo = findViewById(R.id.logo);
+        }
+        else {
+            TextView textView = new TextView(this);
+            textView.setText(R.string.check_Internet);
+            textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            setContentView(textView);
+        }
     }
 
     @Override

@@ -16,4 +16,5 @@
     <string name="error_checklog">Đã có lỗi! Kiểm tra logcat NGAY!</string>
     <string name="check_Internet">Bạn đang ngoại tuyến.\nVui lòng kiểm tra kết nối Internet.</string>
     <string name="dev_in_progress">Tính năng này hiện đang phát triển.</string>
+    <string name="refresh">Làm mới</string>
 </resources>

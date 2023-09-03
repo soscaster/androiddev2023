@@ -73,6 +73,7 @@
     <string name="long_Toulouse" translatable="false">1.4437</string>
     <string name="paris">Paris\nFrance</string>
     <string name="pref_open">Preference Activity activated!</string>
+    <string name="refresh">Refresh</string>
     <string name="refreshed">You just pressed the Refresh button!</string>
     <string name="settings">Settings</string>
     <string name="toulouse">Toulouse\nFrance</string>

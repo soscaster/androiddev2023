@@ -3,24 +3,24 @@
 3    package="vn.edu.usth.weather.test" >
 4
 5    <uses-sdk
-5-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:5:5-74
+5-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:5:5-74
 6        android:minSdkVersion="24"
-6-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:5:15-41
+6-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:5:15-41
 7        android:targetSdkVersion="33" />
-7-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:5:42-71
+7-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:5:42-71
 8
 9    <instrumentation
-9-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:11:5-15:69
+9-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:11:5-15:69
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:11:22-76
+10-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:11:22-76
 11        android:functionalTest="false"
-11-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:14:22-52
+11-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:13:22-53
+12-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:13:22-53
 13        android:label="Tests for vn.edu.usth.weather"
-13-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:15:22-67
+13-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:15:22-67
 14        android:targetPackage="vn.edu.usth.weather" />
-14-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:12:22-65
+14-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:12:22-65
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.5.0] /Users/soscaster/.gradle/caches/transforms-3/a59e3554c983adec8d85c29722acc73b/transformed/core-1.5.0/AndroidManifest.xml:24:5-72
@@ -40,12 +40,12 @@
 22    </queries>
 23
 24    <application
-24-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:7:5-9:19
+24-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:7:5-9:19
 25        android:debuggable="true"
 26        android:extractNativeLibs="false" >
 27        <uses-library android:name="android.test.runner" />
-27-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:8:9-60
-27-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest16235577650814054760.xml:8:23-57
+27-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:8:9-60
+27-->/Users/soscaster/Dropbox/USTHWeather/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest5849334411823346389.xml:8:23-57
 28
 29        <activity
 29-->[androidx.test:core:1.5.0] /Users/soscaster/.gradle/caches/transforms-3/a59e3554c983adec8d85c29722acc73b/transformed/core-1.5.0/AndroidManifest.xml:27:9-34:20
