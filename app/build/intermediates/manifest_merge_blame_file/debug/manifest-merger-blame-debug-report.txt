@@ -54,54 +54,53 @@
 32-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:17:9-54
 33        android:supportsRtl="true"
 33-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:18:9-35
-34        android:testOnly="true"
-35        android:theme="@style/Theme.USTHWeather" >
-35-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:19:9-49
-36        <activity
-36-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:20:9-22:40
-37            android:name="vn.edu.usth.weather.PrefActivity"
-37-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:21:13-41
-38            android:exported="false" />
-38-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:22:13-37
-39        <activity
-39-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:23:9-31:20
-40            android:name="vn.edu.usth.weather.WeatherActivity"
-40-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:24:13-44
-41            android:exported="true" >
-41-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:25:13-36
-42            <intent-filter>
-42-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:26:13-30:29
-43                <action android:name="android.intent.action.MAIN" />
-43-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:27:17-69
-43-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:27:25-66
-44
-45                <category android:name="android.intent.category.LAUNCHER" />
-45-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:29:17-77
-45-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:29:27-74
-46            </intent-filter>
-47        </activity>
-48
-49        <provider
-49-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-50            android:name="androidx.startup.InitializationProvider"
-50-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-51            android:authorities="vn.edu.usth.weather.androidx-startup"
-51-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-52            android:exported="false" >
-52-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-53            <meta-data
-53-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-54                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-54-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-55                android:value="androidx.startup" />
-55-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-56            <meta-data
-56-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/soscaster/.gradle/caches/transforms-3/b53648139df62eed3ac1693b02c07adb/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-57                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-57-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/soscaster/.gradle/caches/transforms-3/b53648139df62eed3ac1693b02c07adb/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-58                android:value="androidx.startup" />
-58-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/soscaster/.gradle/caches/transforms-3/b53648139df62eed3ac1693b02c07adb/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-59        </provider>
-60    </application>
-61
-62</manifest>
+34        android:theme="@style/Theme.USTHWeather" >
+34-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:19:9-49
+35        <activity
+35-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:20:9-22:40
+36            android:name="vn.edu.usth.weather.PrefActivity"
+36-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:21:13-41
+37            android:exported="false" />
+37-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:22:13-37
+38        <activity
+38-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:23:9-31:20
+39            android:name="vn.edu.usth.weather.WeatherActivity"
+39-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:24:13-44
+40            android:exported="true" >
+40-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:25:13-36
+41            <intent-filter>
+41-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:26:13-30:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:27:17-69
+42-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:27:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:29:17-77
+44-->/Users/soscaster/Dropbox/USTHWeather/app/src/main/AndroidManifest.xml:29:27-74
+45            </intent-filter>
+46        </activity>
+47
+48        <provider
+48-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+49            android:name="androidx.startup.InitializationProvider"
+49-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+50            android:authorities="vn.edu.usth.weather.androidx-startup"
+50-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+51            android:exported="false" >
+51-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+52            <meta-data
+52-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+53                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+53-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+54                android:value="androidx.startup" />
+54-->[androidx.emoji2:emoji2:1.2.0] /Users/soscaster/.gradle/caches/transforms-3/316a02c860c73ab94686517a17339332/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+55            <meta-data
+55-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/soscaster/.gradle/caches/transforms-3/b53648139df62eed3ac1693b02c07adb/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+56                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+56-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/soscaster/.gradle/caches/transforms-3/b53648139df62eed3ac1693b02c07adb/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+57                android:value="androidx.startup" />
+57-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/soscaster/.gradle/caches/transforms-3/b53648139df62eed3ac1693b02c07adb/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+58        </provider>
+59    </application>
+60
+61</manifest>
