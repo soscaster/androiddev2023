@@ -104,7 +104,8 @@ class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
 public class WeatherActivity extends AppCompatActivity {
     public static final String SERVER_RESPONSE = "server_response";
     private static final String TAG = "WeatherActivity";
-    private static final String MP3_FILE_PATH = Environment.getExternalStorageDirectory() + "/Music/wonderhoy.mp3";
+    private static final String MP3_FILE_PATH = Environment.getExternalStorageDirectory() + "/Music/welcome.mp3";
+    private static final String MP3_FILE_PATH2 = Environment.getExternalStorageDirectory() + "/Music/donate_short.mp3";
     private String selectedLanguage;
     private MediaPlayer mediaPlayer;
     private void extractMP3File() {
@@ -115,7 +116,7 @@ public class WeatherActivity extends AppCompatActivity {
                 dir.mkdirs();
             }
 
-            InputStream source = getAssets().open("wonderhoy.mp3");
+            InputStream source = getAssets().open("welcome.mp3");
 
             OutputStream target = new FileOutputStream(MP3_FILE_PATH);
 
@@ -133,10 +134,47 @@ public class WeatherActivity extends AppCompatActivity {
             }
     }
 
+    private void extractMP3File2() {
+        try {
+            File dir = new File(Environment.getExternalStorageDirectory() + "/Music");
+            if (!dir.exists())
+            {
+                dir.mkdirs();
+            }
+
+            InputStream source = getAssets().open("donate_short.mp3");
+
+            OutputStream target = new FileOutputStream(MP3_FILE_PATH2);
+
+            byte[] buffer = new byte[8192];
+            int length;
+            while ((length = source.read(buffer)) != -1) {
+                target.write(buffer, 0, length);
+            }
+
+            source.close();
+            target.close();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
     private void playMP3File() {
         try {
             mediaPlayer = new MediaPlayer();
             mediaPlayer.setDataSource(MP3_FILE_PATH);
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void playMP3File2() {
+        try {
+            mediaPlayer = new MediaPlayer();
+            mediaPlayer.setDataSource(MP3_FILE_PATH2);
             mediaPlayer.prepare();
             mediaPlayer.start();
         } catch (IOException e) {
@@ -295,6 +333,7 @@ public class WeatherActivity extends AppCompatActivity {
             });
             AlertDialog dialog = builder.create();
             dialog.show();
+            playMP3File2();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -377,6 +416,7 @@ public class WeatherActivity extends AppCompatActivity {
             tabLayout.setupWithViewPager(pager);
 
             extractMP3File();
+            extractMP3File2();
             playMP3File();
         } else {
             TextView textView = new TextView(this);
