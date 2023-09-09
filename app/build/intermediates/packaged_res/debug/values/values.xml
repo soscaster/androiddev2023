@@ -50,17 +50,17 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
-    <dimen name="weather_frame_size">145sp</dimen>
+    <dimen name="weather_frame_size">205dp</dimen>
     <string name="about_message">Hello! I am Nguyen Quang Minh!\nAnd I like warm hugs!\nEmail: minhnq.bi12-271@st.usth.edu.vn</string>
     <string name="app_about">About me</string>
     <string name="app_name">USTH Weather</string>
     <string name="check_Internet">You are currently offline.\nPlease check the Internet connection.</string>
-    <string name="dev_in_progress">This function is developing at the moment.</string>
+    <string name="dev_in_progress">This function is developing at the moment. Please restart the app.</string>
     <string name="english" translatable="false">English</string>
     <string name="error_checklog">Error occurred! Check logcat NOW!</string>
-    <string name="fetch_forecast_complete">Fetch from Forecast API completed!</string>
+    <string name="fetch_forecast_complete">Fetched from Forecast API!</string>
     <string name="fetch_network">Fetch from Internet successfully!</string>
-    <string name="fetch_weather_complete">Fetch from Weather API completed!</string>
+    <string name="fetch_weather_complete">Fetched from Weather API!</string>
     <string name="hanoi">Hanoi\nVietnam</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="language">Language</string>

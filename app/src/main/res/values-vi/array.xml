@@ -21,8 +21,8 @@
         <item>Tuyết rơi vừa</item>
         <item>Mưa to</item>
         <item>Mưa tuyết</item>
-        <item>Có bão</item>
-        <item>Bão lớn</item>
+        <item>Mưa, có thể giông</item>
+        <item>Giông/bão lớn</item>
     </string-array>
     <integer-array name="degrees">
         <item>25</item>

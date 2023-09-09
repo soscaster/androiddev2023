@@ -15,7 +15,7 @@
     <string name="location_Hanoi" translatable="false">Hanoi,vn</string>
     <string name="location_Paris" translatable="false">Paris,fr</string>
     <string name="location_Toulouse" translatable="false">Toulouse,fr</string>
-    <string name="fetch_forecast_complete">Fetch from Forecast API completed!</string>
+    <string name="fetch_forecast_complete">Fetched from Forecast API!</string>
     <string name="error_checklog">Error occurred! Check logcat NOW!</string>
     <string name="lat_Hanoi" translatable="false">21</string>
     <string name="long_Hanoi" translatable="false">105.875</string>
@@ -23,9 +23,9 @@
     <string name="long_Paris" translatable="false">2.3488</string>
     <string name="lat_Toulouse" translatable="false">43.6043</string>
     <string name="long_Toulouse" translatable="false">1.4437</string>
-    <string name="fetch_weather_complete">Fetch from Weather API completed!</string>
+    <string name="fetch_weather_complete">Fetched from Weather API!</string>
     <string name="check_Internet">You are currently offline.\nPlease check the Internet connection.</string>
-    <string name="dev_in_progress">This function is developing at the moment.</string>
+    <string name="dev_in_progress">This function is developing at the moment. Please restart the app.</string>
     <string name="refresh">Refresh</string>
     <string name="app_about">About me</string>
     <string name="about_message">Hello! I am Nguyen Quang Minh!\nAnd I like warm hugs!\nEmail: minhnq.bi12-271@st.usth.edu.vn</string>

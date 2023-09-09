@@ -12,8 +12,8 @@
         <item>Tuyết rơi vừa</item>
         <item>Mưa to</item>
         <item>Mưa tuyết</item>
-        <item>Có bão</item>
-        <item>Bão lớn</item>
+        <item>Mưa, có thể giông</item>
+        <item>Giông/bão lớn</item>
     </string-array>
     <string-array name="days_of_the_week">
         <item>Thứ 2</item>
@@ -42,15 +42,15 @@
         <item>9</item>
         <item>4</item>
     </integer-array>
-    <string name="about_message">Chào! Tôi là Nguyễn Quang Minh!\nVà tôi thích những cái ôm ấm áp!\nEmail:minhnq.bi12-271@st.usth.edu.vn</string>
+    <string name="about_message">Chào! Tôi là Nguyễn Quang Minh!\nVà tôi thích những cái ôm ấm áp!\nEmail: minhnq.bi12-271@st.usth.edu.vn</string>
     <string name="app_about">Về cá nhân</string>
     <string name="app_name">USTH Thời Tiết</string>
     <string name="check_Internet">Bạn đang ngoại tuyến.\nVui lòng kiểm tra kết nối Internet.</string>
-    <string name="dev_in_progress">Tính năng này hiện đang phát triển.</string>
+    <string name="dev_in_progress">Tính năng này hiện đang phát triển. Hãy khởi động lại phần mềm.</string>
     <string name="error_checklog">Đã có lỗi! Kiểm tra logcat NGAY!</string>
-    <string name="fetch_forecast_complete">Lấy dữ liệu từ API Dự báo thành công!</string>
+    <string name="fetch_forecast_complete">Đã lấy dữ liệu từ API Dự báo!</string>
     <string name="fetch_network">Lấy thông tin từ Internet thành công!</string>
-    <string name="fetch_weather_complete">Lấy dữ liệu từ API Thời tiết thành công!</string>
+    <string name="fetch_weather_complete">Đã lấy dữ liệu từ API Thời tiết!</string>
     <string name="hanoi">Hà Nội\nViệt Nam</string>
     <string name="hello_blank_fragment">Xin chào khoảng không trống</string>
     <string name="language">Ngôn ngữ</string>

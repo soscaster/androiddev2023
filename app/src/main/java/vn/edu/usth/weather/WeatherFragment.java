@@ -59,7 +59,7 @@ public class WeatherFragment extends Fragment {
         params.setMargins(30, 30, 30, 5);
 
         relativeLayout.setLayoutParams(params);
-        relativeLayout.setPadding(140,35,150,35);
+        relativeLayout.setPadding(120,45,130,45);
 
         TextView tempTextView = new TextView(getActivity());
 //        Calendar calendar = Calendar.getInstance();
@@ -153,7 +153,7 @@ public class WeatherFragment extends Fragment {
                 {
                     e.getMessage();
                 }
-                Toast.makeText(getContext(), R.string.fetch_weather_complete, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getContext(), R.string.fetch_weather_complete, Toast.LENGTH_SHORT).show();
                 }
             };
             task1.execute();
@@ -211,7 +211,7 @@ public class WeatherFragment extends Fragment {
         tempTextView.setLayoutParams(tempParams);
         iconImageView.setId(R.id.weather_icon);
 
-        RelativeLayout.LayoutParams iconParams = new RelativeLayout.LayoutParams(300,300);
+        RelativeLayout.LayoutParams iconParams = new RelativeLayout.LayoutParams(350,350);
         iconParams.addRule(RelativeLayout.CENTER_IN_PARENT);
         iconImageView.setLayoutParams(iconParams);
 

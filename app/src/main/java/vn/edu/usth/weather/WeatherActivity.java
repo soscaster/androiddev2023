@@ -418,6 +418,8 @@ public class WeatherActivity extends AppCompatActivity {
             extractMP3File();
             extractMP3File2();
             playMP3File();
+            Toast.makeText(this, R.string.fetch_network, Toast.LENGTH_SHORT).show();
+
         } else {
             TextView textView = new TextView(this);
             textView.setText(R.string.check_Internet);

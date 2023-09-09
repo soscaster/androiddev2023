@@ -11,12 +11,12 @@
     <string name="settings">Cài đặt</string>
     <string name="pref_open">Đã chạy Hoạt động Preference!</string>
     <string name="fetch_network">Lấy thông tin từ Internet thành công!</string>
-    <string name="fetch_weather_complete">Lấy dữ liệu từ API Thời tiết thành công!</string>
-    <string name="fetch_forecast_complete">Lấy dữ liệu từ API Dự báo thành công!</string>
+    <string name="fetch_weather_complete">Đã lấy dữ liệu từ API Thời tiết!</string>
+    <string name="fetch_forecast_complete">Đã lấy dữ liệu từ API Dự báo!</string>
     <string name="error_checklog">Đã có lỗi! Kiểm tra logcat NGAY!</string>
     <string name="check_Internet">Bạn đang ngoại tuyến.\nVui lòng kiểm tra kết nối Internet.</string>
-    <string name="dev_in_progress">Tính năng này hiện đang phát triển.</string>
+    <string name="dev_in_progress">Tính năng này hiện đang phát triển. Hãy khởi động lại phần mềm.</string>
     <string name="refresh">Làm mới</string>
     <string name="app_about">Về cá nhân</string>
-    <string name="about_message">Chào! Tôi là Nguyễn Quang Minh!\nVà tôi thích những cái ôm ấm áp!\nEmail:minhnq.bi12-271@st.usth.edu.vn</string>
+    <string name="about_message">Chào! Tôi là Nguyễn Quang Minh!\nVà tôi thích những cái ôm ấm áp!\nEmail: minhnq.bi12-271@st.usth.edu.vn</string>
 </resources>

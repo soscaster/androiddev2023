@@ -251,7 +251,7 @@ public class ForecastFragment extends Fragment {
             } catch (ParseException e) {
                 throw new RuntimeException(e);
             }
-            Toast.makeText(getContext(), R.string.fetch_forecast_complete, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getContext(), R.string.fetch_forecast_complete, Toast.LENGTH_SHORT).show();
             }
         };
 
