@@ -59,9 +59,13 @@ layout fragment_weather_and_forecast
 menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+string OK_text
 string about_message
 string app_about
 string app_name
+string ask_permission_text
+string ask_permission_title
+string cancel_text
 string check_Internet
 string dev_in_progress
 string english
@@ -69,6 +73,7 @@ string error_checklog
 string fetch_forecast_complete
 string fetch_network
 string fetch_weather_complete
+string granted_notice
 string hanoi
 string hello_blank_fragment
 string language

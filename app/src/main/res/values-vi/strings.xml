@@ -19,4 +19,9 @@
     <string name="refresh">Làm mới</string>
     <string name="app_about">Về cá nhân</string>
     <string name="about_message">Chào! Tôi là Nguyễn Quang Minh!\nVà tôi thích những cái ôm ấm áp!\nEmail: minhnq.bi12-271@st.usth.edu.vn</string>
+    <string name="granted_notice">Phần mềm đã được cấp quyền!</string>
+    <string name="ask_permission_text">Hãy cho phép phần mềm quyền đọc/ghi những nội dung AN TOÀN tới bộ nhớ lưu trữ.</string>
+    <string name="ask_permission_title">Cần quyền truy cập!</string>
+    <string name="OK_text">Đồng ý</string>
+    <string name="cancel_text">Huỷ bỏ</string>
 </resources>

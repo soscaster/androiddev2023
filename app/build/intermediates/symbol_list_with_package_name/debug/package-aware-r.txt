@@ -3740,6 +3740,7 @@ menu menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string OK_text
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3772,12 +3773,15 @@ string androidx_startup
 string app_about
 string app_name
 string appbar_scrolling_view_behavior
+string ask_permission_text
+string ask_permission_title
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string cancel_text
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -3794,6 +3798,7 @@ string fab_transformation_sheet_behavior
 string fetch_forecast_complete
 string fetch_network
 string fetch_weather_complete
+string granted_notice
 string hanoi
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior

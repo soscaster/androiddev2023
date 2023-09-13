@@ -3739,6 +3739,7 @@ int menu menu 0x7f0e0000
 int mipmap ic_launcher 0x7f0f0000
 int mipmap ic_launcher_round 0x7f0f0001
 int plurals mtrl_badge_content_description 0x7f100000
+int string OK_text 0x7f1100bc
 int string abc_action_bar_home_description 0x7f110000
 int string abc_action_bar_up_description 0x7f110001
 int string abc_action_menu_overflow_description 0x7f110002
@@ -3771,12 +3772,15 @@ int string androidx_startup 0x7f11001c
 int string app_about 0x7f11001d
 int string app_name 0x7f11001e
 int string appbar_scrolling_view_behavior 0x7f11001f
+int string ask_permission_text 0x7f1100bd
+int string ask_permission_title 0x7f1100be
 int string bottom_sheet_behavior 0x7f110020
 int string bottomsheet_action_collapse 0x7f110021
 int string bottomsheet_action_expand 0x7f110022
 int string bottomsheet_action_expand_halfway 0x7f110023
 int string bottomsheet_drag_handle_clicked 0x7f110024
 int string bottomsheet_drag_handle_content_description 0x7f110025
+int string cancel_text 0x7f1100bf
 int string character_counter_content_description 0x7f110026
 int string character_counter_overflowed_content_description 0x7f110027
 int string character_counter_pattern 0x7f110028
@@ -3793,6 +3797,7 @@ int string fab_transformation_sheet_behavior 0x7f110032
 int string fetch_forecast_complete 0x7f110033
 int string fetch_network 0x7f110034
 int string fetch_weather_complete 0x7f110035
+int string granted_notice 0x7f1100c0
 int string hanoi 0x7f110036
 int string hello_blank_fragment 0x7f110037
 int string hide_bottom_view_on_scroll_behavior 0x7f110038

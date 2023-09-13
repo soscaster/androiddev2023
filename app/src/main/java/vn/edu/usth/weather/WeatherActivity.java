@@ -5,8 +5,12 @@ package vn.edu.usth.weather;
 //
 //import static java.security.AccessController.getContext;
 
+import static androidx.core.content.ContextCompat.checkSelfPermission;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 //import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 //import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -34,6 +38,7 @@ import android.content.res.Resources;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -42,6 +47,7 @@ import android.os.Environment;
 //import android.os.Looper;
 //import android.os.Message;
 import android.os.LocaleList;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -51,6 +57,7 @@ import android.widget.ImageView;
 //import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.Manifest;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -69,6 +76,7 @@ class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
     private final int PAGE_COUNT = 3;
     private Context context;
     private String[] titles;
+
     public HomeFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
@@ -102,6 +110,8 @@ class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
     }
 }
 public class WeatherActivity extends AppCompatActivity {
+    private static final String PERMISSION_STORAGE = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+    private static final int PERMISSION_CODE = 100;
     public static final String SERVER_RESPONSE = "server_response";
     private static final String TAG = "WeatherActivity";
     private static final String MP3_FILE_PATH = Environment.getExternalStorageDirectory() + "/Music/welcome.mp3";
@@ -182,17 +192,6 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
-//    @Override
-//    protected void attachBaseContext(Context base) {
-//        super.attachBaseContext(base);
-//        // Get the selected language from the shared preferences
-//        SharedPreferences preferences = base.getSharedPreferences("language", MODE_PRIVATE);
-//        String selectedLanguage = preferences.getString("selectedLanguage", null);
-//        if (selectedLanguage != null)
-//        {
-//            setAppLocale(base, selectedLanguage);
-//        }
-//    }
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
@@ -205,22 +204,11 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
-//    private void setAppLocale(Context context, String language) {
-//        // Get the current configuration and set its locale to the given language
-//        Resources resources = context.getResources();
-//        Configuration configuration = resources.getConfiguration();
-//        configuration.setLocale(new Locale(language));
-//
-//        context.getResources().updateConfiguration(configuration, context.getResources().getDisplayMetrics());
-//    }
-
     private void setAppLocale(Context context, String language) {
         // Get the current configuration and set its locale to the given language
         Configuration configuration = context.getResources().getConfiguration();
         configuration.setLocale(new Locale(language));
 
-        // Use the new API to set the application locales
-//        LocaleList locales = new LocaleList(new Locale(language));
         context.getResources().updateConfiguration(configuration, context.getResources().getDisplayMetrics());
     }
 
@@ -240,46 +228,6 @@ public class WeatherActivity extends AppCompatActivity {
 
     @Override public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-//        if (id == R.id.action_language) {
-//            String[] languages = {getString(R.string.english), getString(R.string.vietnamese)};
-//            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//            builder.setTitle(getString(R.string.language));
-//            builder.setSingleChoiceItems(languages, getCheckedItem(languages), new DialogInterface.OnClickListener()
-//            {
-//                @Override public void onClick(DialogInterface dialog, int which){
-//                    selectedLanguage = languages[which];
-//                    if (selectedLanguage.equals(getString(R.string.english)))
-//                    {
-//                        setAppLocale(getApplicationContext(), "en");
-//                    }
-//                    else if (selectedLanguage.equals(getString(R.string.vietnamese)))
-//                    {
-//                        setAppLocale(getApplicationContext(), "vi");
-//                    }
-//                    // Save the selected language in the shared preferences
-//                    SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
-//                    SharedPreferences.Editor editor = preferences.edit();
-//                    editor.putString("selectedLanguage", selectedLanguage);
-//                    editor.apply();
-//
-////                    Intent intent = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
-////                    PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 123456, intent, PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
-////                    AlarmManager alarmManager = (AlarmManager) getBaseContext().getSystemService(Context.ALARM_SERVICE);
-////                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 1 * 1_000L, pendingIntent);
-////                    finish();
-//
-//                    Context ctx = getApplicationContext();
-//                    PackageManager pm = ctx.getPackageManager();
-//                    Intent intent = pm.getLaunchIntentForPackage(ctx.getPackageName());
-//                    Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
-//                    ctx.startActivity(mainIntent);
-//                    Runtime.getRuntime().exit(0);
-//                }
-//            });
-//            AlertDialog dialog = builder.create();
-//            dialog.show();
-//            return true;
-//        }
         if (id == R.id.action_language) {
             String[] languages = {getString(R.string.english), getString(R.string.vietnamese)};
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -339,20 +287,6 @@ public class WeatherActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//    private int getCheckedItem(String[] languages) {
-//        // If the selected language is null, return -1 (no item checked)
-//        if (selectedLanguage == null) {
-//            return -1;
-//        }
-//        if (selectedLanguage.equals(getString(R.string.english))){
-//            return 0;
-//        }
-//        if (selectedLanguage.equals(getString(R.string.vietnamese))){
-//            return 1;
-//        }
-//        // Return -1 if no item checked
-//        return -1;
-//    }
     private int getCheckedItem(String[] languages) {
         // If the selected language is null, return -1 (no item checked)
         if (selectedLanguage == null) {
@@ -371,19 +305,6 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
-//        String selectedLanguage = preferences.getString("selectedLanguage", null);
-//        if (selectedLanguage != null)
-//        {
-//            if (selectedLanguage.equals(getString(R.string.english)))
-//            {
-//                setAppLocale(getBaseContext(),"en");
-//            }
-//            else if (selectedLanguage.equals(getString(R.string.vietnamese)))
-//            {
-//                setAppLocale(getBaseContext(),"vi");
-//            }
-//        }
         SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
         String selectedLanguage = preferences.getString("selectedLanguage", null);
         if (selectedLanguage != null)
@@ -404,7 +325,7 @@ public class WeatherActivity extends AppCompatActivity {
 //        {
 //            setAppLocale("en");
 //        }
-
+        requestRuntimePermission();
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         if (activeNetwork != null && activeNetwork.isConnectedOrConnecting()) {
@@ -434,6 +355,24 @@ public class WeatherActivity extends AppCompatActivity {
 //        getSupportFragmentManager().beginTransaction().add(R.id.container, firstFragment).commit();
     }
 
+    private void requestRuntimePermission(){
+        if (ActivityCompat.checkSelfPermission(this, PERMISSION_STORAGE) == PackageManager.PERMISSION_GRANTED){
+            Toast.makeText(this, R.string.granted_notice, Toast.LENGTH_SHORT).show();
+        } else if (ActivityCompat.shouldShowRequestPermissionRationale(this, PERMISSION_STORAGE)){
+            AlertDialog.Builder reqbuild = new AlertDialog.Builder(this);
+            reqbuild.setMessage(R.string.ask_permission_text)
+                    .setTitle(R.string.ask_permission_title)
+                    .setCancelable(false)
+                    .setPositiveButton(R.string.OK_text, (dialog, which) ->{
+                        ActivityCompat.requestPermissions(WeatherActivity.this, new String[]{PERMISSION_STORAGE}, PERMISSION_CODE);
+                    })
+                    .setNegativeButton(R.string.cancel_text, ((dialog, which) -> dialog.dismiss()));
+            reqbuild.show();
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{PERMISSION_STORAGE}, PERMISSION_CODE);
+        }
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
@@ -442,160 +381,6 @@ public class WeatherActivity extends AppCompatActivity {
         selectedLanguage = preferences.getString("selectedLanguage", null);
         return true;
     }
-//    @Override public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        if (id == R.id.action_language) {
-//            String[] languages = {getString(R.string.english), getString(R.string.vietnamese)};
-//            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//            builder.setTitle(getString(R.string.language));
-//            builder.setSingleChoiceItems(languages, getCheckedItem(languages), new DialogInterface.OnClickListener()
-//            {
-//                @Override public void onClick(DialogInterface dialog, int which){
-//                    selectedLanguage = languages[which];
-//                    if (selectedLanguage.equals(getString(R.string.english)))
-//                    {
-//                        setAppLocale("en");
-//                    }
-//                    else if (selectedLanguage.equals(getString(R.string.vietnamese)))
-//                    {
-//                        setAppLocale("vi");
-//                    }
-//                    // Save the selected language in the shared preferences
-//                    SharedPreferences preferences = getSharedPreferences("language", MODE_PRIVATE);
-//                    SharedPreferences.Editor editor = preferences.edit();
-//                    editor.putString("selectedLanguage", selectedLanguage);
-//                    editor.apply();
-//                    recreate();
-//                }
-//            });
-//            AlertDialog dialog = builder.create();
-//            dialog.show();
-//            return true;
-//        }
-//        if (id == R.id.refresh) {
-////            Practical Work 13 code:
-////            final Handler handler = new Handler(Looper.getMainLooper()) {
-////                @Override
-////                public void handleMessage(Message msg) {
-////                    // This method is executed in main thread
-////                    String content = msg.getData().getString(SERVER_RESPONSE);
-////                    Toast.makeText(getBaseContext(), content, Toast.LENGTH_LONG).show();
-////                }
-////            };
-////            Thread t = new Thread(new Runnable() {
-////                @Override
-////                public void run() {
-////                    // this method is run in a worker thread
-////                    try {
-////                        // wait for 5 seconds to simulate a long network access
-////                        Thread.sleep(1000);
-////                    }
-////                    catch (InterruptedException e) {
-////                        e.printStackTrace();
-////                    }
-////                    // Assume that we got our data from server
-////                    Bundle bundle = new Bundle();
-////                    bundle.putString(SERVER_RESPONSE, getString(R.string.fetch_network));
-////                    // notify main thread
-////                    Message msg = new Message();
-////                    msg.setData(bundle);
-////                    handler.sendMessage(msg);
-////                }
-////            });
-////            t.start();
-////            Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
-//
-////            Practical 15 code:
-////            AsyncTask<String, Integer, Bitmap> task = new AsyncTask<String, Integer, Bitmap>() {
-////                @Override
-////                protected Bitmap doInBackground(String... strings) {
-//////                    sleep(2000);
-////                    // Make a request to server
-////                    try {
-////                        URL url = new URL("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
-////                        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-////                        connection.setRequestMethod("GET");
-////                        connection.setDoInput(true);
-////                        connection.connect();
-////                        int response = connection.getResponseCode();
-////                        Log.i("USTHWeather", "The response is: " + response);
-////                        InputStream is = connection.getInputStream();
-////                        Bitmap bitmap = BitmapFactory.decodeStream(is);
-////                        runOnUiThread(new Runnable() {
-////                            @Override
-////                            public void run() {
-////                                ImageView logo = (ImageView) findViewById(R.id.weather_icon);
-////                                logo.setImageBitmap(bitmap);
-////                            }
-////                        });
-////                    } catch (Exception e) {
-////                        Log.i(TAG, "ERROR: " + e);
-////                    }
-////                    return null;
-////                }
-////
-////                @Override
-////                protected void onPostExecute(Bitmap bitmap) {
-////                    Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
-////                }
-////            };
-////            task.execute("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png");
-//
-//            // Practical Work 16 code:
-////            RequestQueue queue = newRequestQueue(getBaseContext());
-////            Response.Listener<Bitmap> listener = new Response.Listener<Bitmap>() {
-////                @Override
-////                public void onResponse(Bitmap response) {
-////                    ImageView iv = (ImageView) findViewById(R.id.weather_icon);
-////                    iv.setImageBitmap(response);
-////                }
-////            };
-////            ImageRequest imageRequest = new ImageRequest("https://usth.edu.vn/wp-content/uploads/2021/11/logo.png", listener, 0, 0, ImageView.ScaleType.CENTER, Bitmap.Config.ARGB_8888,null);
-////            // go!
-////            queue.add(imageRequest);
-////            Toast.makeText(getBaseContext(), R.string.refreshed, Toast.LENGTH_LONG).show();
-//
-//            recreate();
-//        }
-//
-//        if (id == R.id.settings) {
-//            Intent intent = new Intent(this, PrefActivity.class);
-//            startActivity(intent);
-//            Toast.makeText(getBaseContext(), R.string.pref_open, Toast.LENGTH_LONG).show();
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
-//
-//    private int getCheckedItem(String[] languages) {
-//        // If the selected language is null, return -1 (no item checked)
-//        if (selectedLanguage == null) {
-//            return -1;
-//        }
-//        if (selectedLanguage.equals(getString(R.string.english))){
-//            return 0;
-//        }
-//        if (selectedLanguage.equals(getString(R.string.vietnamese))){
-//            return 1;
-//        }
-//        // Return -1 if no item checked
-//        return -1;
-//    }
-//
-//    // Define a method to set the app locale based on the language code
-//    private void setAppLocale(String language) {
-//        // Get the current configuration and set its locale to the given language
-//        Resources resources = getResources();
-//        Configuration configuration = resources.getConfiguration();
-//        configuration.setLocale(new Locale(language));
-//        // Update the configuration for the app context and resources
-//        getApplicationContext().createConfigurationContext(configuration);
-//        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
-//
-//        // Add these lines of code to update the app title as well
-//        String appTitle = getString(R.string.app_name); // Get the app name from strings.xml
-//        Activity activity = this; // Get the current activity
-//        activity.setTitle(appTitle); // Set the app title with the new language
-//    }
 
     @Override
     public void onStart() {

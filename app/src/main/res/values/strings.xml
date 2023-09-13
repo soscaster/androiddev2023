@@ -29,4 +29,9 @@
     <string name="refresh">Refresh</string>
     <string name="app_about">About me</string>
     <string name="about_message">Hello! I am Nguyen Quang Minh!\nAnd I like warm hugs!\nEmail: minhnq.bi12-271@st.usth.edu.vn</string>
+    <string name="granted_notice">Permission Granted for the app!</string>
+    <string name="ask_permission_text">Please allow me to read/write SAFE files to your external storage.</string>
+    <string name="ask_permission_title">Permission Required!</string>
+    <string name="OK_text">OK</string>
+    <string name="cancel_text">Cancel</string>
 </resources>
